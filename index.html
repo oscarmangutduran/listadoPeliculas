@@ -1,11 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Listado Peliculas</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <title>Listado Películas</title>
   </head>
   <body>
-    <h1>Listado Peliculas</h1>
+    <div class="layout">
+      <!-- Cabecera -->
+      <header class="header">
+        <h1>Listado Películas</h1>
+      </header>
+
+      <!-- Barra Navegación -->
+      <nav class="nav">
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Películas</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <!-- Contenido Principal -->
+      <section class="content">
+        <!-- Aquí van las películas -->
+      </section>
+
+      <!-- Barra lateral -->
+      <aside class="lateral">
+        <div class="search">
+          <h3 class="title">Buscador</h3>
+          <form>
+            <input type="text" />
+            <button>Buscar</button>
+          </form>
+        </div>
+
+        <div class="add">
+          <h3 class="title">Añadir Películas</h3>
+          <form>
+            <input type="text" placeholder="Título" />
+            <textarea placeholder="Descripción"></textarea>
+            <input type="submit" value="Guardar" />
+          </form>
+        </div>
+      </aside>
+
+      <!-- Pie de página -->
+      <footer>
+        &copy; 2024 Oscar Mangut Dev -
+        <a
+          href="https://www.linkedin.com/in/oscarmangutduran/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >LinkedIn</a
+        >
+      </footer>
+    </div>
   </body>
 </html>
