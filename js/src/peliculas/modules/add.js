@@ -18,9 +18,20 @@ export default class Add {
       let description = this.description_field.value.trim();
 
       //Pequeña validación
-      if (titlle != "" || description != "") {
-        alert("Introduce correctamente los datos en el formulario");
+      if (title != "" || description != "") {
+        //Crear un objeto a guardar
+        let pelicula = {
+          id: 1,
+          title,
+          description,
+        };
+
+        //Guardar en LocalStorage
+        localStorage.setItem("peliculas", JSON.stringify(pelicula));
+
+        //Actualizar listado
       } else {
+        alert("Introduce correctamente los datos en el formulario");
       }
 
       // Mostrar el mensaje en la consola con los datos
