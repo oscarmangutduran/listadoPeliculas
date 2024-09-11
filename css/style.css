@@ -160,10 +160,30 @@ input[type="button"] {
   outline: 0;
   border-color: transparent;
 }
-
+/*Estilos Piede página*/
 .footer {
   grid-area: footer;
+  background: #d1defa;
+  color: #454545;
+  border-top: 10x solid white;
+  text-align: center;
+  line-height: 68px;
+  padding-left: 25px;
+}
 
-  border: 5px solid black;
-  background: lightpink;
+.footer a {
+  color: #0b468a;
+  text-decoration: none;
+}
+
+@media (max-width: 1085px) {
+  .content {
+    flex-flow: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .peli-item {
+    width: 80%;
+  }
 }
