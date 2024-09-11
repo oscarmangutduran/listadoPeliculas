@@ -37,26 +37,7 @@
           <button class="delete">Borrar</button>
         </article>
 
-        <article class="peli-item">
-          <h3 class="title">Desarrollo Web</h3>
-          <p class="description">oscarmangut.dev</p>
-          <button class="edit">Editar</button>
-          <button class="delete">Borrar</button>
-        </article>
-
-        <article class="peli-item">
-          <h3 class="title">Desarrollo Web</h3>
-          <p class="description">oscarmangut.dev</p>
-          <button class="edit">Editar</button>
-          <button class="delete">Borrar</button>
-        </article>
-
-        <article class="peli-item">
-          <h3 class="title">Desarrollo Web</h3>
-          <p class="description">oscarmangut.dev</p>
-          <button class="edit">Editar</button>
-          <button class="delete">Borrar</button>
-        </article>
+        <!-- Repetir para otros artículos... -->
       </section>
 
       <!-- Barra lateral -->
@@ -64,17 +45,19 @@
         <div class="search">
           <h3 class="title">Buscador</h3>
           <form>
-            <input type="text" />
-            <button>Buscar</button>
+            <input type="text" placeholder="Buscar..." />
+            <button type="submit">Buscar</button>
           </form>
         </div>
 
         <div class="add">
           <h3 class="title">Añadir Películas</h3>
           <form>
-            <input type="text" placeholder="Título" />
-            <textarea placeholder="Descripción"></textarea>
-            <input type="submit" value="Guardar" />
+            <label for="title">Título:</label>
+            <input type="text" id="title" placeholder="Título" />
+            <label for="description">Descripción:</label>
+            <textarea id="description" placeholder="Descripción"></textarea>
+            <input type="submit" id="save" value="Guardar" />
           </form>
         </div>
       </aside>

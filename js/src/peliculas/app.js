@@ -1,12 +1,13 @@
+import Add from "./modules/add.js";
+
 export default class App {
-  constructor() {}
+  constructor() {
+    // Inicializar la clase Add
+    this.add = new Add();
+  }
+
   load() {
-    //Añadir pelicula
-
-    //Listar peliculas
-
-    //Buscar peliculas
-
+    // Añadir película (este método ya se llama automáticamente en el constructor de Add)
     console.log("La aplicación de películas ha sido inicializada");
   }
 }
