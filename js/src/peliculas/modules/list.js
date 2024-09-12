@@ -1,3 +1,4 @@
+import deleteOfList from "./delete.js";
 export default class List {
   constructor() {
     // Seleccionamos el contenedor donde se van a mostrar las películas
@@ -29,5 +30,10 @@ export default class List {
     peliculas.forEach((pelicula) => {
       this.addToList(pelicula);
     });
+
+    //Funcionalidad botones de borrado
+    deleteOfList();
+
+    //Funcionalidad botones de edición
   }
 }
