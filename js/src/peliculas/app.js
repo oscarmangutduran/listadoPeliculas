@@ -4,22 +4,21 @@ import Storage from "./modules/storage.js";
 
 export default class App {
   constructor() {
-    // Inicializar la clase Add
+    // Inicializar las clases
     this.add = new Add();
     this.list = new List();
-    this.Storage = new Storage();
+    this.storage = new Storage();
+
+    // Cargar la aplicación
+    this.load();
   }
 
   load() {
-    //Añadir pelicula
-    this.add.peliculaSave();
+    // Cargar las películas del localStorage y mostrarlas en la lista
+    const peliculas = this.storage.getData();
+    this.list.show(peliculas);
 
-    //Conseguir array objetos localStorage
-    const pelicualas = this.Storage.getData();
-
-    //Listar peliculas
-    this.list.show(pelicualas);
-    // Añadir película (este método ya se llama automáticamente en el constructor de Add)
+    // Mensaje de consola para confirmar que la aplicación ha cargado
     console.log("La aplicación de películas ha sido inicializada");
   }
 }

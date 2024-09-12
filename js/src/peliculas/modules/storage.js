@@ -16,9 +16,8 @@ export default class Storage {
           description: "oscarmangut.dev",
         },
       ];
-      this.id = 1; // Reiniciar el ID
+      this.id = 1;
     } else {
-      // Si hay películas, calcular el ID del último elemento + 1
       this.id = peliculas[peliculas.length - 1].id + 1;
     }
 
@@ -26,11 +25,10 @@ export default class Storage {
   }
 
   getLastId() {
-    return this.id; // Devolver el último ID disponible
+    return this.id;
   }
 
   save(peliculas) {
-    // Guardar el array actualizado en localStorage
     localStorage.setItem("peliculas", JSON.stringify(peliculas));
   }
 }
