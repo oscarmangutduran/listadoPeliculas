@@ -28,16 +28,8 @@
       </nav>
 
       <!-- Contenido Principal -->
-      <section class="content">
-        <!-- Aquí van las películas -->
-        <article class="peli-item">
-          <h3 class="title">Desarrollo Web</h3>
-          <p class="description">oscarmangut.dev</p>
-          <button class="edit">Editar</button>
-          <button class="delete">Borrar</button>
-        </article>
-
-        <!-- Repetir para otros artículos... -->
+      <section class="content" id="content">
+        <!-- Aquí se mostrarán las películas dinámicamente -->
       </section>
 
       <!-- Barra lateral -->
@@ -57,7 +49,8 @@
             <input type="text" id="title" placeholder="Título" />
             <label for="description">Descripción:</label>
             <textarea id="description" placeholder="Descripción"></textarea>
-            <input type="submit" id="save" value="Guardar" />
+            <!-- Cambié a button para evitar el comportamiento de envío por defecto -->
+            <button type="button" id="save">Guardar</button>
           </form>
         </div>
       </aside>

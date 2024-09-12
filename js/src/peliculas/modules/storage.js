@@ -4,11 +4,11 @@ export default class Storage {
   }
 
   getData() {
-    // Obtener las películas guardadas en LocalStorage
-    let peliculas = JSON.parse(localStorage.getItem("peliculas"));
+    // Obtener las películas desde localStorage
+    let peliculas = JSON.parse(localStorage.getItem("peliculas")) || [];
 
-    // Si no existen películas, inicializamos el array con una película por defecto
-    if (!peliculas || peliculas.length < 1) {
+    // Si no hay películas, añadir una por defecto
+    if (peliculas.length < 1) {
       peliculas = [
         {
           id: 0,
@@ -18,24 +18,19 @@ export default class Storage {
       ];
       this.id = 1; // Reiniciar el ID
     } else {
-      this.id = peliculas[peliculas.length - 1].id + 1; // Incrementar ID
+      // Si hay películas, calcular el ID del último elemento + 1
+      this.id = peliculas[peliculas.length - 1].id + 1;
     }
 
     return peliculas;
   }
 
   getLastId() {
-    return this.id; // Devolver el último ID calculado
+    return this.id; // Devolver el último ID disponible
   }
 
-  save(data) {
-    // Obtener las películas actuales
-    let peliculas = this.getData();
-
-    // Añadir la nueva película al array
-    peliculas.push(data);
-
-    // Guardar el array actualizado en LocalStorage
+  save(peliculas) {
+    // Guardar el array actualizado en localStorage
     localStorage.setItem("peliculas", JSON.stringify(peliculas));
   }
 }
