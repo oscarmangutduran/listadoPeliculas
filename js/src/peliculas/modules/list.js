@@ -1,4 +1,6 @@
 import deleteOfList from "./delete.js";
+import edit from "./edit.js";
+
 export default class List {
   constructor() {
     // Seleccionamos el contenedor donde se van a mostrar las películas
@@ -35,5 +37,6 @@ export default class List {
     deleteOfList();
 
     //Funcionalidad botones de edición
+    edit();
   }
 }
