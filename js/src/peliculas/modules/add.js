@@ -47,7 +47,8 @@ export default class Add {
         this.storage.save(peliculas);
 
         // Añadir la película al listado visualmente sin borrar las anteriores
-        this.list.addToList(pelicula);
+        //this.list.addToList(pelicula);
+        this.list.show(peliculas);
 
         // Limpiar los campos del formulario
         this.title_field.value = "";
